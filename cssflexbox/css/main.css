@@ -5,6 +5,7 @@ html {
 body {
     background-color: #f1f500;
     padding: 10px;
+    margin: 0;
 }
 
 /* Flexbox shenanigans below */
@@ -12,12 +13,12 @@ body {
     background-color: #f073e1;
     margin: 10px;
     padding: 30px;
-    height: 500px;
+    height: 600px;
     display: flex;
-    flex-flow: row wrap; /* Defining flex-direction and flex-wrap respectively */
-    align-items: center; /* Refers to the Cross Axis */
-    justify-content: center; /* Refers to the Main Axis */
-    align-content: flex-start; /* Refers to the Cross Axis, but only if theres itens in more than 1 line */
+    flex-flow: row nowrap; /* Defining flex-direction and flex-wrap respectively */
+    align-items: center; /* Relates to the Cross Axis */
+    justify-content: flex-start; /* Relates to the Main Axis */
+    /* align-content: flex-start; Relates to the Cross Axis, but only if theres itens in more than 1 line */
 }
 .div1 {
     background-color: #f800db;
@@ -28,11 +29,12 @@ body {
     margin: 5px;
     width: 150px;
     font-size: 30px;
+    /* align-self: flex-start; Refers to the Cross Axis */
 }
 .div3 {
     background-color: #f800db;
     margin: 5px;
-    width: 150px;
+    height: 150px;
 }
 .div4 {
     background-color: #f800db;
@@ -44,9 +46,12 @@ body {
     background-color: #f800db;
     margin: 5px;
     width: 200px;
+    flex: 0 1 auto; /* Respectively: Flex-Grow, Flex-Shrink and Flex-Basis */
+    /* Flex-Basis only refers to the Main Axis and Flex-Itens */
 }
 .div6 {
     background-color: #f800db;
     margin: 5px;
     width: 200px;
+    flex: 0 1 100px;
 }
